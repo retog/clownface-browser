@@ -1,4 +1,4 @@
-# clownface-browser
+# clownface-browser[![Build Status](https://travis-ci.org/retog/clownface-browser.svg?branch=master)](https://travis-ci.org/retog/clownface-browser)
  Browser friendly version of 
 [rdf-lib-clownface](https://github.com/rdf-ext/clownface).
 
