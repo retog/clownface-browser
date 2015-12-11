@@ -1,0 +1,22 @@
+{
+  "name": "clownface-browser",
+  "version": "0.3.0-rc2",
+  "description": "A browser friendly version of clownface",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "mkdir -p dist && browserify -d index.js --external rdf-ext | exorcist dist/clownface.js.map > dist/clownface.js"
+  },
+  "author": "Reto Gmür <me@farewellutopia.com>",
+  "license": "MIT",
+  "dependencies": {
+    "clownface": "0.3.0-rc2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/retog/clownface-browser.git"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "exorcist": "^0.4.0"
+  }
+}

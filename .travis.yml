@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+node_js:
+  - "4.2" 
+deploy:
+  - provider: npm
+    email: "reto.gmuer@zazuko.com"
+    api_key:
+      secure: "IFcbSJy39VWbUQEcqBJYY+QEA7NG1+w4pt++JEd4M8fw6/xqhjA2ddIK02ap0JtyssXDFcJCRbOfFwt9IrPxxZXzYls+jeaqqq52BTFM/Nnw3q8SHc95W8sOtx/0VfsUphRJILmG4luoLpG6DLkO2plw7eaKqjByxfjUm6FXWnQEcbThiBVrsRaVWlYSJfeLE/2nHdFWVZ010xPn29vAz+s+UTjtH6N1iRx0zfXo8MUwLZGOae5/ilr1+jFNfQLHNNbUClmB9vxLNnnFP/kmJ+aM1HBUGx6gZmYvNf5WHXxwR0KVhwI0DlfDKLDw7kXC6gBsGPbBNDhbd4aIqOPiKsRZ6T70BMADg6pDDfXMpCDQR1rO5HBMjz3/62M9umEzuWAL908iam55qsJP4VpK5XqwthgkD4p5Auo8hzzNz1nte/dIahXBwzxHuyTmyH/frBigp7yzrVtmneiZ0/QZzskmDqlIq83OSJ3J9k+/JRUT8ooILnQGHVeZptoB6GjxQeUweZmAsL0GCCrly0GlTSvWvQ5fgeBmFctT6w3DJMaRATW1ZQYa15E3/d7y9zjl0sqkVy5+U7TmbVmrSvf5YRXim3Ew6CqB3Iyzx416ogsf0r6GQGPkqJLuxTFlcfiGSbJRazkMtDl/NzhU0u0zOrF769tZ20RPMFOLGU4IErM="
+    on:
+      tags: true
+  - provider: releases
+    api_key:
+      secure: "gT+cczbmdYQb9jt+cBZY8H0TXMAyCKibtK6QuuO761m7pDWj8h2SZUuEox3lQMhq18DfUlW35TdKRw5HLtwlORd5RU44siUFci29z9kjEyUftWvZXbZ0mm0i6h4D657pnot/BCEyKmuuth2YUo1y7/76lrvnGf5tSTg2HUJIjMBrESTTRlcDLjFESF97PQxLYZoqT67gfCA/YT77zuwjIskoHiau+d3Hkn4Zz1+2xMidqA1vlKKB43WpI8ow018sSmZr74vWPy7zcmPZyEyqKWogNJlPmGZWR+f97dXVMBQcijSuoa+sVevWwbTyXiQzouyFoKVN4T1kL59sN1PfFMn7Cgfd/TqjhEIOEzlIGIb+c7meo8kue8KJTEKZUnVcNwF/kDHXbnWcaZvx9/Z0gDHMVpkMx6IQxu1QHl/hguJfpXI/uaOJJVA5fET6iTeCugbLqXBws+5Uhx1C2CsT9MqtlmBxiCT9x1ghHMzzCEei72vP/isBfjrTBOyKBGXXLrllHvKxGjrUXLo/VnyRrmfldkseGLtcB+cOuEsItaGJMQGKQOJD3oHPHN/tjZrNb+zGfLZoCs2WWIK6R795QdcwAN5ZPGWNf8SzTVmQqMW+dV5HRHz/L+siztKok49SWTjGgAsp0IrfYkTrIxkHaix9oizhatRxI622zHiHR8M="
+    file: dist/rdf-store-ldp.js
+    on:
+      tags: true
